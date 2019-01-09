@@ -1,7 +1,7 @@
 var input = "lighthouse in the house";
 
 function countLetters(string) {
-    var small = input.replace(/\s/gi, "").toLowerCase();
+    var small = string.toLowerCase();
 
     var obj = {}
 
@@ -11,6 +11,7 @@ function countLetters(string) {
         }
         obj[small[i]].push(i);
     }
+    delete obj[' '];
     return (obj)
 
 }
